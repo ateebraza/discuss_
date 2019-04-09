@@ -828,3 +828,836 @@ DEBUG 2019-04-09 01:10:00,472 django.db.backends (0.000)
                 ORDER BY c.wbs
             ; args=[8, None, 8, None, '1']
 DEBUG 2019-04-09 01:10:11,889 django.db.backends (0.001) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments", ("posts"."upvotes" - "posts"."downvotes") AS "score", "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "posts" INNER JOIN "users" ON ("posts"."author_id" = "users"."id") ORDER BY "posts"."submission_time" DESC LIMIT 50; args=()
+DEBUG 2019-04-09 06:13:11,937 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:11,937 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:11,937 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:11,937 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:11,938 django.db.backends.schema CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:11,938 django.db.backends (0.000) CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); args=None
+DEBUG 2019-04-09 06:13:11,947 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:11,948 django.db.backends (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+DEBUG 2019-04-09 06:13:11,949 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:11,949 django.db.backends (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+DEBUG 2019-04-09 06:13:11,952 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:11,952 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:11,952 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:11,954 django.db.backends.schema CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:11,954 django.db.backends (0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:11,957 django.db.backends.schema ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:11,957 django.db.backends (0.000) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:11,957 django.db.backends.schema CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:11,957 django.db.backends (0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:11,957 django.db.backends.schema INSERT INTO "django_content_type" ("model", "app_label", "id", "name") SELECT "model", "app_label", "id", "name" FROM "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:11,958 django.db.backends (0.000) INSERT INTO "django_content_type" ("model", "app_label", "id", "name") SELECT "model", "app_label", "id", "name" FROM "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:11,958 django.db.backends.schema DROP TABLE "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:11,958 django.db.backends (0.000) DROP TABLE "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:11,958 django.db.backends.schema CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+DEBUG 2019-04-09 06:13:11,958 django.db.backends (0.000) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+DEBUG 2019-04-09 06:13:11,965 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:11,965 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:11,966 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:11,967 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0001_initial', '2019-04-09 06:13:11.966688'); args=['contenttypes', u'0001_initial', u'2019-04-09 06:13:11.966688']
+DEBUG 2019-04-09 06:13:11,984 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:11,984 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:11,985 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,003 django.db.backends.schema ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:12,004 django.db.backends (0.001) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:12,005 django.db.backends.schema CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); (params None)
+DEBUG 2019-04-09 06:13:12,006 django.db.backends (0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); args=None
+DEBUG 2019-04-09 06:13:12,006 django.db.backends.schema INSERT INTO "django_content_type" ("model", "app_label", "id", "name") SELECT "model", "app_label", "id", "name" FROM "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:12,006 django.db.backends (0.000) INSERT INTO "django_content_type" ("model", "app_label", "id", "name") SELECT "model", "app_label", "id", "name" FROM "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:12,007 django.db.backends.schema DROP TABLE "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:12,007 django.db.backends (0.000) DROP TABLE "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:12,007 django.db.backends.schema CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+DEBUG 2019-04-09 06:13:12,007 django.db.backends (0.000) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+DEBUG 2019-04-09 06:13:12,013 django.db.backends.schema ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:12,013 django.db.backends (0.000) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:12,013 django.db.backends.schema CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,014 django.db.backends (0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,014 django.db.backends.schema INSERT INTO "django_content_type" ("model", "app_label", "id") SELECT "model", "app_label", "id" FROM "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:12,014 django.db.backends (0.000) INSERT INTO "django_content_type" ("model", "app_label", "id") SELECT "model", "app_label", "id" FROM "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:12,014 django.db.backends.schema DROP TABLE "django_content_type__old"; (params [])
+DEBUG 2019-04-09 06:13:12,014 django.db.backends (0.000) DROP TABLE "django_content_type__old"; args=[]
+DEBUG 2019-04-09 06:13:12,014 django.db.backends.schema CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+DEBUG 2019-04-09 06:13:12,015 django.db.backends (0.000) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+DEBUG 2019-04-09 06:13:12,021 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,021 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,021 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,022 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0002_remove_content_type_name', '2019-04-09 06:13:12.021745'); args=['contenttypes', u'0002_remove_content_type_name', u'2019-04-09 06:13:12.021745']
+DEBUG 2019-04-09 06:13:12,027 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,028 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,028 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,036 django.db.backends.schema CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,037 django.db.backends (0.000) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,044 django.db.backends.schema CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); (params None)
+DEBUG 2019-04-09 06:13:12,045 django.db.backends (0.000) CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); args=None
+DEBUG 2019-04-09 06:13:12,045 django.db.backends.schema CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,045 django.db.backends (0.000) CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,053 django.db.backends.schema CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); (params [])
+DEBUG 2019-04-09 06:13:12,053 django.db.backends (0.000) CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); args=[]
+DEBUG 2019-04-09 06:13:12,054 django.db.backends.schema CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); (params [])
+DEBUG 2019-04-09 06:13:12,054 django.db.backends (0.000) CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); args=[]
+DEBUG 2019-04-09 06:13:12,054 django.db.backends.schema CREATE UNIQUE INDEX "auth_group_permissions_group_id_0cd325b0_uniq" ON "auth_group_permissions" ("group_id", "permission_id"); (params [])
+DEBUG 2019-04-09 06:13:12,054 django.db.backends (0.000) CREATE UNIQUE INDEX "auth_group_permissions_group_id_0cd325b0_uniq" ON "auth_group_permissions" ("group_id", "permission_id"); args=[]
+DEBUG 2019-04-09 06:13:12,054 django.db.backends.schema CREATE INDEX "auth_group_permissions_0e939a4f" ON "auth_group_permissions" ("group_id"); (params [])
+DEBUG 2019-04-09 06:13:12,054 django.db.backends (0.000) CREATE INDEX "auth_group_permissions_0e939a4f" ON "auth_group_permissions" ("group_id"); args=[]
+DEBUG 2019-04-09 06:13:12,054 django.db.backends.schema CREATE INDEX "auth_group_permissions_8373b171" ON "auth_group_permissions" ("permission_id"); (params [])
+DEBUG 2019-04-09 06:13:12,054 django.db.backends (0.000) CREATE INDEX "auth_group_permissions_8373b171" ON "auth_group_permissions" ("permission_id"); args=[]
+DEBUG 2019-04-09 06:13:12,061 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,061 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,062 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,062 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0001_initial', '2019-04-09 06:13:12.062172'); args=['auth', u'0001_initial', u'2019-04-09 06:13:12.062172']
+DEBUG 2019-04-09 06:13:12,068 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,069 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,069 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,082 django.db.backends.schema ALTER TABLE "auth_permission" RENAME TO "auth_permission__old"; (params [])
+DEBUG 2019-04-09 06:13:12,083 django.db.backends (0.000) ALTER TABLE "auth_permission" RENAME TO "auth_permission__old"; args=[]
+DEBUG 2019-04-09 06:13:12,084 django.db.backends.schema CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,085 django.db.backends (0.000) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,085 django.db.backends.schema INSERT INTO "auth_permission" ("content_type_id", "codename", "id", "name") SELECT "content_type_id", "codename", "id", "name" FROM "auth_permission__old"; (params [])
+DEBUG 2019-04-09 06:13:12,085 django.db.backends (0.000) INSERT INTO "auth_permission" ("content_type_id", "codename", "id", "name") SELECT "content_type_id", "codename", "id", "name" FROM "auth_permission__old"; args=[]
+DEBUG 2019-04-09 06:13:12,085 django.db.backends.schema DROP TABLE "auth_permission__old"; (params [])
+DEBUG 2019-04-09 06:13:12,085 django.db.backends (0.000) DROP TABLE "auth_permission__old"; args=[]
+DEBUG 2019-04-09 06:13:12,086 django.db.backends.schema CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); (params [])
+DEBUG 2019-04-09 06:13:12,086 django.db.backends (0.000) CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); args=[]
+DEBUG 2019-04-09 06:13:12,086 django.db.backends.schema CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); (params [])
+DEBUG 2019-04-09 06:13:12,086 django.db.backends (0.000) CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); args=[]
+DEBUG 2019-04-09 06:13:12,093 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,093 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,093 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,094 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0002_alter_permission_name_max_length', '2019-04-09 06:13:12.093685'); args=['auth', u'0002_alter_permission_name_max_length', u'2019-04-09 06:13:12.093685']
+DEBUG 2019-04-09 06:13:12,099 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,099 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,099 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,107 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,107 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,107 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,108 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0003_alter_user_email_max_length', '2019-04-09 06:13:12.107845'); args=['auth', u'0003_alter_user_email_max_length', u'2019-04-09 06:13:12.107845']
+DEBUG 2019-04-09 06:13:12,113 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,113 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,114 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,122 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,122 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,122 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,122 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0004_alter_user_username_opts', '2019-04-09 06:13:12.122474'); args=['auth', u'0004_alter_user_username_opts', u'2019-04-09 06:13:12.122474']
+DEBUG 2019-04-09 06:13:12,128 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,129 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,129 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,142 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,143 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,143 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,144 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0005_alter_user_last_login_null', '2019-04-09 06:13:12.143404'); args=['auth', u'0005_alter_user_last_login_null', u'2019-04-09 06:13:12.143404']
+DEBUG 2019-04-09 06:13:12,149 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,149 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,149 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,150 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,150 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,150 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,151 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0006_require_contenttypes_0002', '2019-04-09 06:13:12.150514'); args=['auth', u'0006_require_contenttypes_0002', u'2019-04-09 06:13:12.150514']
+DEBUG 2019-04-09 06:13:12,156 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,156 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,156 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,164 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,164 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,164 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,165 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0007_alter_validators_add_error_messages', '2019-04-09 06:13:12.164700'); args=['auth', u'0007_alter_validators_add_error_messages', u'2019-04-09 06:13:12.164700']
+DEBUG 2019-04-09 06:13:12,169 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,170 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,170 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,177 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,177 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,177 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,178 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0008_alter_user_username_max_length', '2019-04-09 06:13:12.177926'); args=['auth', u'0008_alter_user_username_max_length', u'2019-04-09 06:13:12.177926']
+DEBUG 2019-04-09 06:13:12,183 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,183 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,184 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,193 django.db.backends.schema CREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "score" integer NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,194 django.db.backends (0.000) CREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "score" integer NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,194 django.db.backends.schema CREATE TABLE "users_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "users" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,194 django.db.backends (0.000) CREATE TABLE "users_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "users" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,195 django.db.backends.schema CREATE TABLE "users_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "users" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,195 django.db.backends (0.000) CREATE TABLE "users_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "users" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,207 django.db.backends.schema CREATE TABLE "comments" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "wbs" varchar(30) NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id"), "parent_comment_id" integer NULL REFERENCES "comments" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,207 django.db.backends (0.000) CREATE TABLE "comments" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "wbs" varchar(30) NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id"), "parent_comment_id" integer NULL REFERENCES "comments" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,233 django.db.backends.schema CREATE TABLE "favourites" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" integer unsigned NOT NULL, "favourited_on" datetime NOT NULL, "deleted_on" datetime NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,234 django.db.backends (0.000) CREATE TABLE "favourites" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" integer unsigned NOT NULL, "favourited_on" datetime NOT NULL, "deleted_on" datetime NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,247 django.db.backends.schema CREATE TABLE "posts" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "title" varchar(120) NOT NULL, "url" varchar(200) NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "num_comments" integer NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,247 django.db.backends (0.000) CREATE TABLE "posts" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "title" varchar(120) NOT NULL, "url" varchar(200) NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "num_comments" integer NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,260 django.db.backends.schema CREATE TABLE "votes" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" integer unsigned NOT NULL, "type_of_vote" integer NOT NULL, "submission_time" datetime NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "voter_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,261 django.db.backends (0.000) CREATE TABLE "votes" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" integer unsigned NOT NULL, "type_of_vote" integer NOT NULL, "submission_time" datetime NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "voter_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,276 django.db.backends.schema ALTER TABLE "comments" RENAME TO "comments__old"; (params [])
+DEBUG 2019-04-09 06:13:12,276 django.db.backends (0.000) ALTER TABLE "comments" RENAME TO "comments__old"; args=[]
+DEBUG 2019-04-09 06:13:12,277 django.db.backends.schema CREATE TABLE "comments" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "wbs" varchar(30) NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id"), "post_id" integer NOT NULL REFERENCES "posts" ("id"), "parent_comment_id" integer NULL REFERENCES "comments" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,277 django.db.backends (0.000) CREATE TABLE "comments" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "wbs" varchar(30) NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id"), "post_id" integer NOT NULL REFERENCES "posts" ("id"), "parent_comment_id" integer NULL REFERENCES "comments" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,277 django.db.backends.schema INSERT INTO "comments" ("wbs", "text", "downvotes", "post_id", "parent_comment_id", "flags", "submission_time", "upvotes", "author_id", "id") SELECT "wbs", "text", "downvotes", NULL, "parent_comment_id", "flags", "submission_time", "upvotes", "author_id", "id" FROM "comments__old"; (params [])
+DEBUG 2019-04-09 06:13:12,277 django.db.backends (0.000) INSERT INTO "comments" ("wbs", "text", "downvotes", "post_id", "parent_comment_id", "flags", "submission_time", "upvotes", "author_id", "id") SELECT "wbs", "text", "downvotes", NULL, "parent_comment_id", "flags", "submission_time", "upvotes", "author_id", "id" FROM "comments__old"; args=[]
+DEBUG 2019-04-09 06:13:12,277 django.db.backends.schema DROP TABLE "comments__old"; (params [])
+DEBUG 2019-04-09 06:13:12,278 django.db.backends (0.000) DROP TABLE "comments__old"; args=[]
+DEBUG 2019-04-09 06:13:12,278 django.db.backends.schema CREATE UNIQUE INDEX "users_groups_user_id_fc7788e8_uniq" ON "users_groups" ("user_id", "group_id"); (params [])
+DEBUG 2019-04-09 06:13:12,278 django.db.backends (0.000) CREATE UNIQUE INDEX "users_groups_user_id_fc7788e8_uniq" ON "users_groups" ("user_id", "group_id"); args=[]
+DEBUG 2019-04-09 06:13:12,278 django.db.backends.schema CREATE INDEX "users_groups_e8701ad4" ON "users_groups" ("user_id"); (params [])
+DEBUG 2019-04-09 06:13:12,278 django.db.backends (0.000) CREATE INDEX "users_groups_e8701ad4" ON "users_groups" ("user_id"); args=[]
+DEBUG 2019-04-09 06:13:12,278 django.db.backends.schema CREATE INDEX "users_groups_0e939a4f" ON "users_groups" ("group_id"); (params [])
+DEBUG 2019-04-09 06:13:12,278 django.db.backends (0.000) CREATE INDEX "users_groups_0e939a4f" ON "users_groups" ("group_id"); args=[]
+DEBUG 2019-04-09 06:13:12,278 django.db.backends.schema CREATE UNIQUE INDEX "users_user_permissions_user_id_3b86cbdf_uniq" ON "users_user_permissions" ("user_id", "permission_id"); (params [])
+DEBUG 2019-04-09 06:13:12,279 django.db.backends (0.000) CREATE UNIQUE INDEX "users_user_permissions_user_id_3b86cbdf_uniq" ON "users_user_permissions" ("user_id", "permission_id"); args=[]
+DEBUG 2019-04-09 06:13:12,279 django.db.backends.schema CREATE INDEX "users_user_permissions_e8701ad4" ON "users_user_permissions" ("user_id"); (params [])
+DEBUG 2019-04-09 06:13:12,279 django.db.backends (0.000) CREATE INDEX "users_user_permissions_e8701ad4" ON "users_user_permissions" ("user_id"); args=[]
+DEBUG 2019-04-09 06:13:12,279 django.db.backends.schema CREATE INDEX "users_user_permissions_8373b171" ON "users_user_permissions" ("permission_id"); (params [])
+DEBUG 2019-04-09 06:13:12,279 django.db.backends (0.000) CREATE INDEX "users_user_permissions_8373b171" ON "users_user_permissions" ("permission_id"); args=[]
+DEBUG 2019-04-09 06:13:12,279 django.db.backends.schema CREATE INDEX "favourites_417f1b1c" ON "favourites" ("content_type_id"); (params [])
+DEBUG 2019-04-09 06:13:12,279 django.db.backends (0.000) CREATE INDEX "favourites_417f1b1c" ON "favourites" ("content_type_id"); args=[]
+DEBUG 2019-04-09 06:13:12,279 django.db.backends.schema CREATE INDEX "favourites_e8701ad4" ON "favourites" ("user_id"); (params [])
+DEBUG 2019-04-09 06:13:12,279 django.db.backends (0.000) CREATE INDEX "favourites_e8701ad4" ON "favourites" ("user_id"); args=[]
+DEBUG 2019-04-09 06:13:12,279 django.db.backends.schema CREATE INDEX "posts_4f331e2f" ON "posts" ("author_id"); (params [])
+DEBUG 2019-04-09 06:13:12,280 django.db.backends (0.000) CREATE INDEX "posts_4f331e2f" ON "posts" ("author_id"); args=[]
+DEBUG 2019-04-09 06:13:12,280 django.db.backends.schema CREATE INDEX "votes_417f1b1c" ON "votes" ("content_type_id"); (params [])
+DEBUG 2019-04-09 06:13:12,280 django.db.backends (0.000) CREATE INDEX "votes_417f1b1c" ON "votes" ("content_type_id"); args=[]
+DEBUG 2019-04-09 06:13:12,280 django.db.backends.schema CREATE INDEX "votes_49fb0f8b" ON "votes" ("voter_id"); (params [])
+DEBUG 2019-04-09 06:13:12,280 django.db.backends (0.000) CREATE INDEX "votes_49fb0f8b" ON "votes" ("voter_id"); args=[]
+DEBUG 2019-04-09 06:13:12,280 django.db.backends.schema CREATE INDEX "comments_4f331e2f" ON "comments" ("author_id"); (params [])
+DEBUG 2019-04-09 06:13:12,280 django.db.backends (0.000) CREATE INDEX "comments_4f331e2f" ON "comments" ("author_id"); args=[]
+DEBUG 2019-04-09 06:13:12,280 django.db.backends.schema CREATE INDEX "comments_f3aa1999" ON "comments" ("post_id"); (params [])
+DEBUG 2019-04-09 06:13:12,280 django.db.backends (0.000) CREATE INDEX "comments_f3aa1999" ON "comments" ("post_id"); args=[]
+DEBUG 2019-04-09 06:13:12,280 django.db.backends.schema CREATE INDEX "comments_3a87a439" ON "comments" ("parent_comment_id"); (params [])
+DEBUG 2019-04-09 06:13:12,281 django.db.backends (0.000) CREATE INDEX "comments_3a87a439" ON "comments" ("parent_comment_id"); args=[]
+DEBUG 2019-04-09 06:13:12,294 django.db.backends.schema ALTER TABLE "votes" RENAME TO "votes__old"; (params [])
+DEBUG 2019-04-09 06:13:12,294 django.db.backends (0.000) ALTER TABLE "votes" RENAME TO "votes__old"; args=[]
+DEBUG 2019-04-09 06:13:12,295 django.db.backends.schema CREATE TABLE "votes" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" integer unsigned NOT NULL, "type_of_vote" integer NOT NULL, "submission_time" datetime NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "voter_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,295 django.db.backends (0.000) CREATE TABLE "votes" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" integer unsigned NOT NULL, "type_of_vote" integer NOT NULL, "submission_time" datetime NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "voter_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,295 django.db.backends.schema INSERT INTO "votes" ("content_type_id", "voter_id", "type_of_vote", "object_id", "submission_time", "id") SELECT "content_type_id", "voter_id", "type_of_vote", "object_id", "submission_time", "id" FROM "votes__old"; (params [])
+DEBUG 2019-04-09 06:13:12,295 django.db.backends (0.000) INSERT INTO "votes" ("content_type_id", "voter_id", "type_of_vote", "object_id", "submission_time", "id") SELECT "content_type_id", "voter_id", "type_of_vote", "object_id", "submission_time", "id" FROM "votes__old"; args=[]
+DEBUG 2019-04-09 06:13:12,295 django.db.backends.schema DROP TABLE "votes__old"; (params [])
+DEBUG 2019-04-09 06:13:12,295 django.db.backends (0.000) DROP TABLE "votes__old"; args=[]
+DEBUG 2019-04-09 06:13:12,295 django.db.backends.schema CREATE INDEX "votes_417f1b1c" ON "votes" ("content_type_id"); (params [])
+DEBUG 2019-04-09 06:13:12,296 django.db.backends (0.000) CREATE INDEX "votes_417f1b1c" ON "votes" ("content_type_id"); args=[]
+DEBUG 2019-04-09 06:13:12,296 django.db.backends.schema CREATE INDEX "votes_49fb0f8b" ON "votes" ("voter_id"); (params [])
+DEBUG 2019-04-09 06:13:12,296 django.db.backends (0.000) CREATE INDEX "votes_49fb0f8b" ON "votes" ("voter_id"); args=[]
+DEBUG 2019-04-09 06:13:12,296 django.db.backends.schema CREATE INDEX "votes_content_type_id_f4b062c2_idx" ON "votes" ("content_type_id", "object_id"); (params [])
+DEBUG 2019-04-09 06:13:12,296 django.db.backends (0.000) CREATE INDEX "votes_content_type_id_f4b062c2_idx" ON "votes" ("content_type_id", "object_id"); args=[]
+DEBUG 2019-04-09 06:13:12,310 django.db.backends.schema ALTER TABLE "posts" RENAME TO "posts__old"; (params [])
+DEBUG 2019-04-09 06:13:12,310 django.db.backends (0.000) ALTER TABLE "posts" RENAME TO "posts__old"; args=[]
+DEBUG 2019-04-09 06:13:12,311 django.db.backends.schema CREATE TABLE "posts" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "title" varchar(120) NOT NULL, "url" varchar(200) NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "num_comments" integer NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,311 django.db.backends (0.000) CREATE TABLE "posts" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "title" varchar(120) NOT NULL, "url" varchar(200) NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "num_comments" integer NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,311 django.db.backends.schema INSERT INTO "posts" ("num_comments", "title", "url", "text", "downvotes", "flags", "submission_time", "upvotes", "author_id", "id") SELECT "num_comments", "title", "url", "text", "downvotes", "flags", "submission_time", "upvotes", "author_id", "id" FROM "posts__old"; (params [])
+DEBUG 2019-04-09 06:13:12,311 django.db.backends (0.000) INSERT INTO "posts" ("num_comments", "title", "url", "text", "downvotes", "flags", "submission_time", "upvotes", "author_id", "id") SELECT "num_comments", "title", "url", "text", "downvotes", "flags", "submission_time", "upvotes", "author_id", "id" FROM "posts__old"; args=[]
+DEBUG 2019-04-09 06:13:12,311 django.db.backends.schema DROP TABLE "posts__old"; (params [])
+DEBUG 2019-04-09 06:13:12,312 django.db.backends (0.000) DROP TABLE "posts__old"; args=[]
+DEBUG 2019-04-09 06:13:12,312 django.db.backends.schema CREATE INDEX "posts_4f331e2f" ON "posts" ("author_id"); (params [])
+DEBUG 2019-04-09 06:13:12,312 django.db.backends (0.000) CREATE INDEX "posts_4f331e2f" ON "posts" ("author_id"); args=[]
+DEBUG 2019-04-09 06:13:12,312 django.db.backends.schema CREATE INDEX "posts_submission_time_d5f0fa0c_idx" ON "posts" ("submission_time"); (params [])
+DEBUG 2019-04-09 06:13:12,312 django.db.backends (0.000) CREATE INDEX "posts_submission_time_d5f0fa0c_idx" ON "posts" ("submission_time"); args=[]
+DEBUG 2019-04-09 06:13:12,325 django.db.backends.schema ALTER TABLE "comments" RENAME TO "comments__old"; (params [])
+DEBUG 2019-04-09 06:13:12,325 django.db.backends (0.000) ALTER TABLE "comments" RENAME TO "comments__old"; args=[]
+DEBUG 2019-04-09 06:13:12,326 django.db.backends.schema CREATE TABLE "comments" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "wbs" varchar(30) NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id"), "post_id" integer NOT NULL REFERENCES "posts" ("id"), "parent_comment_id" integer NULL REFERENCES "comments" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,326 django.db.backends (0.000) CREATE TABLE "comments" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upvotes" integer NOT NULL, "downvotes" integer NOT NULL, "flags" integer NOT NULL, "text" text NOT NULL, "submission_time" datetime NOT NULL, "wbs" varchar(30) NOT NULL, "author_id" integer NOT NULL REFERENCES "users" ("id"), "post_id" integer NOT NULL REFERENCES "posts" ("id"), "parent_comment_id" integer NULL REFERENCES "comments" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,326 django.db.backends.schema INSERT INTO "comments" ("wbs", "text", "downvotes", "post_id", "parent_comment_id", "flags", "submission_time", "upvotes", "author_id", "id") SELECT "wbs", "text", "downvotes", "post_id", "parent_comment_id", "flags", "submission_time", "upvotes", "author_id", "id" FROM "comments__old"; (params [])
+DEBUG 2019-04-09 06:13:12,326 django.db.backends (0.000) INSERT INTO "comments" ("wbs", "text", "downvotes", "post_id", "parent_comment_id", "flags", "submission_time", "upvotes", "author_id", "id") SELECT "wbs", "text", "downvotes", "post_id", "parent_comment_id", "flags", "submission_time", "upvotes", "author_id", "id" FROM "comments__old"; args=[]
+DEBUG 2019-04-09 06:13:12,326 django.db.backends.schema DROP TABLE "comments__old"; (params [])
+DEBUG 2019-04-09 06:13:12,326 django.db.backends (0.000) DROP TABLE "comments__old"; args=[]
+DEBUG 2019-04-09 06:13:12,326 django.db.backends.schema CREATE UNIQUE INDEX "comments_post_id_c4fc8326_uniq" ON "comments" ("post_id", "wbs"); (params [])
+DEBUG 2019-04-09 06:13:12,326 django.db.backends (0.000) CREATE UNIQUE INDEX "comments_post_id_c4fc8326_uniq" ON "comments" ("post_id", "wbs"); args=[]
+DEBUG 2019-04-09 06:13:12,327 django.db.backends.schema CREATE INDEX "comments_4f331e2f" ON "comments" ("author_id"); (params [])
+DEBUG 2019-04-09 06:13:12,327 django.db.backends (0.000) CREATE INDEX "comments_4f331e2f" ON "comments" ("author_id"); args=[]
+DEBUG 2019-04-09 06:13:12,327 django.db.backends.schema CREATE INDEX "comments_f3aa1999" ON "comments" ("post_id"); (params [])
+DEBUG 2019-04-09 06:13:12,327 django.db.backends (0.000) CREATE INDEX "comments_f3aa1999" ON "comments" ("post_id"); args=[]
+DEBUG 2019-04-09 06:13:12,327 django.db.backends.schema CREATE INDEX "comments_3a87a439" ON "comments" ("parent_comment_id"); (params [])
+DEBUG 2019-04-09 06:13:12,327 django.db.backends (0.000) CREATE INDEX "comments_3a87a439" ON "comments" ("parent_comment_id"); args=[]
+DEBUG 2019-04-09 06:13:12,336 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,336 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,337 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,337 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('discussions', '0001_initial', '2019-04-09 06:13:12.337246'); args=[u'discussions', u'0001_initial', u'2019-04-09 06:13:12.337246']
+DEBUG 2019-04-09 06:13:12,343 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,343 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,344 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,368 django.db.backends.schema CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,368 django.db.backends (0.000) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,368 django.db.backends.schema CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); (params [])
+DEBUG 2019-04-09 06:13:12,368 django.db.backends (0.000) CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); args=[]
+DEBUG 2019-04-09 06:13:12,368 django.db.backends.schema CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); (params [])
+DEBUG 2019-04-09 06:13:12,369 django.db.backends (0.000) CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); args=[]
+DEBUG 2019-04-09 06:13:12,381 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,382 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,383 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,385 django.db.backends (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0001_initial', '2019-04-09 06:13:12.383046'); args=['admin', u'0001_initial', u'2019-04-09 06:13:12.383046']
+DEBUG 2019-04-09 06:13:12,390 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,391 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,391 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,414 django.db.backends.schema ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; (params [])
+DEBUG 2019-04-09 06:13:12,415 django.db.backends (0.000) ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; args=[]
+DEBUG 2019-04-09 06:13:12,415 django.db.backends.schema CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "users" ("id"), "action_time" datetime NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,415 django.db.backends (0.000) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "users" ("id"), "action_time" datetime NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,416 django.db.backends.schema INSERT INTO "django_admin_log" ("action_flag", "action_time", "user_id", "content_type_id", "object_repr", "object_id", "change_message", "id") SELECT "action_flag", "action_time", "user_id", "content_type_id", "object_repr", "object_id", "change_message", "id" FROM "django_admin_log__old"; (params [])
+DEBUG 2019-04-09 06:13:12,416 django.db.backends (0.000) INSERT INTO "django_admin_log" ("action_flag", "action_time", "user_id", "content_type_id", "object_repr", "object_id", "change_message", "id") SELECT "action_flag", "action_time", "user_id", "content_type_id", "object_repr", "object_id", "change_message", "id" FROM "django_admin_log__old"; args=[]
+DEBUG 2019-04-09 06:13:12,416 django.db.backends.schema DROP TABLE "django_admin_log__old"; (params [])
+DEBUG 2019-04-09 06:13:12,416 django.db.backends (0.000) DROP TABLE "django_admin_log__old"; args=[]
+DEBUG 2019-04-09 06:13:12,417 django.db.backends.schema CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); (params [])
+DEBUG 2019-04-09 06:13:12,417 django.db.backends (0.000) CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); args=[]
+DEBUG 2019-04-09 06:13:12,417 django.db.backends.schema CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); (params [])
+DEBUG 2019-04-09 06:13:12,417 django.db.backends (0.000) CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); args=[]
+DEBUG 2019-04-09 06:13:12,424 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,424 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,425 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,425 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0002_logentry_remove_auto_add', '2019-04-09 06:13:12.424946'); args=['admin', u'0002_logentry_remove_auto_add', u'2019-04-09 06:13:12.424946']
+DEBUG 2019-04-09 06:13:12,430 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,430 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,430 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,434 django.db.backends.schema CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,434 django.db.backends (0.000) CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,434 django.db.backends.schema CREATE INDEX "django_session_de54fa62" ON "django_session" ("expire_date"); (params [])
+DEBUG 2019-04-09 06:13:12,435 django.db.backends (0.000) CREATE INDEX "django_session_de54fa62" ON "django_session" ("expire_date"); args=[]
+DEBUG 2019-04-09 06:13:12,441 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,442 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,442 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,443 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('sessions', '0001_initial', '2019-04-09 06:13:12.442557'); args=['sessions', u'0001_initial', u'2019-04-09 06:13:12.442557']
+DEBUG 2019-04-09 06:13:12,447 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,448 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,448 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,452 django.db.backends.schema CREATE TABLE "social_auth_association" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "handle" varchar(255) NOT NULL, "secret" varchar(255) NOT NULL, "issued" integer NOT NULL, "lifetime" integer NOT NULL, "assoc_type" varchar(64) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,452 django.db.backends (0.000) CREATE TABLE "social_auth_association" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "handle" varchar(255) NOT NULL, "secret" varchar(255) NOT NULL, "issued" integer NOT NULL, "lifetime" integer NOT NULL, "assoc_type" varchar(64) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,455 django.db.backends.schema CREATE TABLE "social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" varchar(75) NOT NULL, "code" varchar(32) NOT NULL, "verified" bool NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,455 django.db.backends (0.000) CREATE TABLE "social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" varchar(75) NOT NULL, "code" varchar(32) NOT NULL, "verified" bool NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,459 django.db.backends.schema CREATE TABLE "social_auth_nonce" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "timestamp" integer NOT NULL, "salt" varchar(65) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,459 django.db.backends (0.000) CREATE TABLE "social_auth_nonce" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "timestamp" integer NOT NULL, "salt" varchar(65) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,476 django.db.backends.schema CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,477 django.db.backends (0.000) CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,493 django.db.backends.schema ALTER TABLE "social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,493 django.db.backends (0.000) ALTER TABLE "social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,494 django.db.backends.schema CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,494 django.db.backends (0.000) CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,494 django.db.backends.schema INSERT INTO "social_auth_usersocialauth" ("uid", "extra_data", "user_id", "id", "provider") SELECT "uid", "extra_data", "user_id", "id", "provider" FROM "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,494 django.db.backends (0.000) INSERT INTO "social_auth_usersocialauth" ("uid", "extra_data", "user_id", "id", "provider") SELECT "uid", "extra_data", "user_id", "id", "provider" FROM "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,494 django.db.backends.schema DROP TABLE "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,495 django.db.backends (0.000) DROP TABLE "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,495 django.db.backends.schema CREATE INDEX "social_auth_code_c1336794" ON "social_auth_code" ("code"); (params [])
+DEBUG 2019-04-09 06:13:12,495 django.db.backends (0.000) CREATE INDEX "social_auth_code_c1336794" ON "social_auth_code" ("code"); args=[]
+DEBUG 2019-04-09 06:13:12,495 django.db.backends.schema CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); (params [])
+DEBUG 2019-04-09 06:13:12,495 django.db.backends (0.000) CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); args=[]
+DEBUG 2019-04-09 06:13:12,495 django.db.backends.schema CREATE INDEX "social_auth_usersocialauth_e8701ad4" ON "social_auth_usersocialauth" ("user_id"); (params [])
+DEBUG 2019-04-09 06:13:12,495 django.db.backends (0.000) CREATE INDEX "social_auth_usersocialauth_e8701ad4" ON "social_auth_usersocialauth" ("user_id"); args=[]
+DEBUG 2019-04-09 06:13:12,499 django.db.backends.schema ALTER TABLE "social_auth_code" RENAME TO "social_auth_code__old"; (params [])
+DEBUG 2019-04-09 06:13:12,499 django.db.backends (0.000) ALTER TABLE "social_auth_code" RENAME TO "social_auth_code__old"; args=[]
+DEBUG 2019-04-09 06:13:12,499 django.db.backends.schema CREATE TABLE "social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" varchar(75) NOT NULL, "code" varchar(32) NOT NULL, "verified" bool NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,500 django.db.backends (0.000) CREATE TABLE "social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" varchar(75) NOT NULL, "code" varchar(32) NOT NULL, "verified" bool NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,500 django.db.backends.schema INSERT INTO "social_auth_code" ("code", "verified", "id", "email") SELECT "code", "verified", "id", "email" FROM "social_auth_code__old"; (params [])
+DEBUG 2019-04-09 06:13:12,500 django.db.backends (0.000) INSERT INTO "social_auth_code" ("code", "verified", "id", "email") SELECT "code", "verified", "id", "email" FROM "social_auth_code__old"; args=[]
+DEBUG 2019-04-09 06:13:12,500 django.db.backends.schema DROP TABLE "social_auth_code__old"; (params [])
+DEBUG 2019-04-09 06:13:12,500 django.db.backends (0.000) DROP TABLE "social_auth_code__old"; args=[]
+DEBUG 2019-04-09 06:13:12,500 django.db.backends.schema CREATE UNIQUE INDEX "social_auth_code_email_801b2d02_uniq" ON "social_auth_code" ("email", "code"); (params [])
+DEBUG 2019-04-09 06:13:12,500 django.db.backends (0.000) CREATE UNIQUE INDEX "social_auth_code_email_801b2d02_uniq" ON "social_auth_code" ("email", "code"); args=[]
+DEBUG 2019-04-09 06:13:12,500 django.db.backends.schema CREATE INDEX "social_auth_code_c1336794" ON "social_auth_code" ("code"); (params [])
+DEBUG 2019-04-09 06:13:12,500 django.db.backends (0.000) CREATE INDEX "social_auth_code_c1336794" ON "social_auth_code" ("code"); args=[]
+DEBUG 2019-04-09 06:13:12,504 django.db.backends.schema ALTER TABLE "social_auth_nonce" RENAME TO "social_auth_nonce__old"; (params [])
+DEBUG 2019-04-09 06:13:12,504 django.db.backends (0.000) ALTER TABLE "social_auth_nonce" RENAME TO "social_auth_nonce__old"; args=[]
+DEBUG 2019-04-09 06:13:12,505 django.db.backends.schema CREATE TABLE "social_auth_nonce" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "timestamp" integer NOT NULL, "salt" varchar(65) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,505 django.db.backends (0.000) CREATE TABLE "social_auth_nonce" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "timestamp" integer NOT NULL, "salt" varchar(65) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,505 django.db.backends.schema INSERT INTO "social_auth_nonce" ("timestamp", "salt", "id", "server_url") SELECT "timestamp", "salt", "id", "server_url" FROM "social_auth_nonce__old"; (params [])
+DEBUG 2019-04-09 06:13:12,505 django.db.backends (0.000) INSERT INTO "social_auth_nonce" ("timestamp", "salt", "id", "server_url") SELECT "timestamp", "salt", "id", "server_url" FROM "social_auth_nonce__old"; args=[]
+DEBUG 2019-04-09 06:13:12,505 django.db.backends.schema DROP TABLE "social_auth_nonce__old"; (params [])
+DEBUG 2019-04-09 06:13:12,505 django.db.backends (0.000) DROP TABLE "social_auth_nonce__old"; args=[]
+DEBUG 2019-04-09 06:13:12,505 django.db.backends.schema CREATE UNIQUE INDEX "social_auth_nonce_server_url_f6284463_uniq" ON "social_auth_nonce" ("server_url", "timestamp", "salt"); (params [])
+DEBUG 2019-04-09 06:13:12,505 django.db.backends (0.000) CREATE UNIQUE INDEX "social_auth_nonce_server_url_f6284463_uniq" ON "social_auth_nonce" ("server_url", "timestamp", "salt"); args=[]
+DEBUG 2019-04-09 06:13:12,515 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,516 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,516 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,517 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('default', '0001_initial', '2019-04-09 06:13:12.516762'); args=[u'default', u'0001_initial', u'2019-04-09 06:13:12.516762']
+DEBUG 2019-04-09 06:13:12,523 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,524 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,525 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0001_initial', '2019-04-09 06:13:12.524440'); args=[u'social_auth', u'0001_initial', u'2019-04-09 06:13:12.524440']
+DEBUG 2019-04-09 06:13:12,531 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,532 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,532 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,556 django.db.backends.schema ALTER TABLE "social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,556 django.db.backends (0.000) ALTER TABLE "social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,557 django.db.backends.schema CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "users" ("id")); (params None)
+DEBUG 2019-04-09 06:13:12,557 django.db.backends (0.000) CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "extra_data" text NOT NULL, "user_id" integer NOT NULL REFERENCES "users" ("id")); args=None
+DEBUG 2019-04-09 06:13:12,557 django.db.backends.schema INSERT INTO "social_auth_usersocialauth" ("uid", "extra_data", "user_id", "id", "provider") SELECT "uid", "extra_data", "user_id", "id", "provider" FROM "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,557 django.db.backends (0.000) INSERT INTO "social_auth_usersocialauth" ("uid", "extra_data", "user_id", "id", "provider") SELECT "uid", "extra_data", "user_id", "id", "provider" FROM "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,557 django.db.backends.schema DROP TABLE "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,558 django.db.backends (0.000) DROP TABLE "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,558 django.db.backends.schema CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); (params [])
+DEBUG 2019-04-09 06:13:12,558 django.db.backends (0.000) CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); args=[]
+DEBUG 2019-04-09 06:13:12,558 django.db.backends.schema CREATE INDEX "social_auth_usersocialauth_e8701ad4" ON "social_auth_usersocialauth" ("user_id"); (params [])
+DEBUG 2019-04-09 06:13:12,558 django.db.backends (0.000) CREATE INDEX "social_auth_usersocialauth_e8701ad4" ON "social_auth_usersocialauth" ("user_id"); args=[]
+DEBUG 2019-04-09 06:13:12,565 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,566 django.db.backends (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,567 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,568 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('default', '0002_add_related_name', '2019-04-09 06:13:12.567370'); args=[u'default', u'0002_add_related_name', u'2019-04-09 06:13:12.567370']
+DEBUG 2019-04-09 06:13:12,574 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,574 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,575 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0002_add_related_name', '2019-04-09 06:13:12.574757'); args=[u'social_auth', u'0002_add_related_name', u'2019-04-09 06:13:12.574757']
+DEBUG 2019-04-09 06:13:12,580 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,580 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,580 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,587 django.db.backends.schema ALTER TABLE "social_auth_code" RENAME TO "social_auth_code__old"; (params [])
+DEBUG 2019-04-09 06:13:12,587 django.db.backends (0.000) ALTER TABLE "social_auth_code" RENAME TO "social_auth_code__old"; args=[]
+DEBUG 2019-04-09 06:13:12,588 django.db.backends.schema CREATE TABLE "social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "code" varchar(32) NOT NULL, "verified" bool NOT NULL, "email" varchar(254) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,588 django.db.backends (0.000) CREATE TABLE "social_auth_code" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "code" varchar(32) NOT NULL, "verified" bool NOT NULL, "email" varchar(254) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,588 django.db.backends.schema INSERT INTO "social_auth_code" ("code", "verified", "id", "email") SELECT "code", "verified", "id", "email" FROM "social_auth_code__old"; (params [])
+DEBUG 2019-04-09 06:13:12,588 django.db.backends (0.000) INSERT INTO "social_auth_code" ("code", "verified", "id", "email") SELECT "code", "verified", "id", "email" FROM "social_auth_code__old"; args=[]
+DEBUG 2019-04-09 06:13:12,589 django.db.backends.schema DROP TABLE "social_auth_code__old"; (params [])
+DEBUG 2019-04-09 06:13:12,589 django.db.backends (0.000) DROP TABLE "social_auth_code__old"; args=[]
+DEBUG 2019-04-09 06:13:12,589 django.db.backends.schema CREATE UNIQUE INDEX "social_auth_code_email_801b2d02_uniq" ON "social_auth_code" ("email", "code"); (params [])
+DEBUG 2019-04-09 06:13:12,589 django.db.backends (0.000) CREATE UNIQUE INDEX "social_auth_code_email_801b2d02_uniq" ON "social_auth_code" ("email", "code"); args=[]
+DEBUG 2019-04-09 06:13:12,589 django.db.backends.schema CREATE INDEX "social_auth_code_c1336794" ON "social_auth_code" ("code"); (params [])
+DEBUG 2019-04-09 06:13:12,590 django.db.backends (0.000) CREATE INDEX "social_auth_code_c1336794" ON "social_auth_code" ("code"); args=[]
+DEBUG 2019-04-09 06:13:12,595 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,595 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,595 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,596 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('default', '0003_alter_email_max_length', '2019-04-09 06:13:12.595759'); args=[u'default', u'0003_alter_email_max_length', u'2019-04-09 06:13:12.595759']
+DEBUG 2019-04-09 06:13:12,601 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,601 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,601 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0003_alter_email_max_length', '2019-04-09 06:13:12.601379'); args=[u'social_auth', u'0003_alter_email_max_length', u'2019-04-09 06:13:12.601379']
+DEBUG 2019-04-09 06:13:12,606 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,606 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,606 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,626 django.db.backends.schema ALTER TABLE "social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,627 django.db.backends (0.000) ALTER TABLE "social_auth_usersocialauth" RENAME TO "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,627 django.db.backends.schema CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "user_id" integer NOT NULL REFERENCES "users" ("id"), "extra_data" text NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,627 django.db.backends (0.000) CREATE TABLE "social_auth_usersocialauth" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "provider" varchar(32) NOT NULL, "uid" varchar(255) NOT NULL, "user_id" integer NOT NULL REFERENCES "users" ("id"), "extra_data" text NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,628 django.db.backends.schema INSERT INTO "social_auth_usersocialauth" ("uid", "extra_data", "user_id", "id", "provider") SELECT "uid", "extra_data", "user_id", "id", "provider" FROM "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,628 django.db.backends (0.000) INSERT INTO "social_auth_usersocialauth" ("uid", "extra_data", "user_id", "id", "provider") SELECT "uid", "extra_data", "user_id", "id", "provider" FROM "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,628 django.db.backends.schema DROP TABLE "social_auth_usersocialauth__old"; (params [])
+DEBUG 2019-04-09 06:13:12,628 django.db.backends (0.000) DROP TABLE "social_auth_usersocialauth__old"; args=[]
+DEBUG 2019-04-09 06:13:12,628 django.db.backends.schema CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); (params [])
+DEBUG 2019-04-09 06:13:12,628 django.db.backends (0.000) CREATE UNIQUE INDEX "social_auth_usersocialauth_provider_e6b5e668_uniq" ON "social_auth_usersocialauth" ("provider", "uid"); args=[]
+DEBUG 2019-04-09 06:13:12,628 django.db.backends.schema CREATE INDEX "social_auth_usersocialauth_e8701ad4" ON "social_auth_usersocialauth" ("user_id"); (params [])
+DEBUG 2019-04-09 06:13:12,628 django.db.backends (0.000) CREATE INDEX "social_auth_usersocialauth_e8701ad4" ON "social_auth_usersocialauth" ("user_id"); args=[]
+DEBUG 2019-04-09 06:13:12,633 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,633 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,634 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,634 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('default', '0004_auto_20160423_0400', '2019-04-09 06:13:12.634112'); args=[u'default', u'0004_auto_20160423_0400', u'2019-04-09 06:13:12.634112']
+DEBUG 2019-04-09 06:13:12,639 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,639 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,639 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0004_auto_20160423_0400', '2019-04-09 06:13:12.639309'); args=[u'social_auth', u'0004_auto_20160423_0400', u'2019-04-09 06:13:12.639309']
+DEBUG 2019-04-09 06:13:12,644 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,644 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,644 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,648 django.db.backends.schema ALTER TABLE "social_auth_association" RENAME TO "social_auth_association__old"; (params [])
+DEBUG 2019-04-09 06:13:12,649 django.db.backends (0.000) ALTER TABLE "social_auth_association" RENAME TO "social_auth_association__old"; args=[]
+DEBUG 2019-04-09 06:13:12,649 django.db.backends.schema CREATE TABLE "social_auth_association" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "handle" varchar(255) NOT NULL, "secret" varchar(255) NOT NULL, "issued" integer NOT NULL, "lifetime" integer NOT NULL, "assoc_type" varchar(64) NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,649 django.db.backends (0.000) CREATE TABLE "social_auth_association" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "server_url" varchar(255) NOT NULL, "handle" varchar(255) NOT NULL, "secret" varchar(255) NOT NULL, "issued" integer NOT NULL, "lifetime" integer NOT NULL, "assoc_type" varchar(64) NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,649 django.db.backends.schema INSERT INTO "social_auth_association" ("handle", "issued", "server_url", "assoc_type", "secret", "lifetime", "id") SELECT "handle", "issued", "server_url", "assoc_type", "secret", "lifetime", "id" FROM "social_auth_association__old"; (params [])
+DEBUG 2019-04-09 06:13:12,650 django.db.backends (0.000) INSERT INTO "social_auth_association" ("handle", "issued", "server_url", "assoc_type", "secret", "lifetime", "id") SELECT "handle", "issued", "server_url", "assoc_type", "secret", "lifetime", "id" FROM "social_auth_association__old"; args=[]
+DEBUG 2019-04-09 06:13:12,650 django.db.backends.schema DROP TABLE "social_auth_association__old"; (params [])
+DEBUG 2019-04-09 06:13:12,650 django.db.backends (0.000) DROP TABLE "social_auth_association__old"; args=[]
+DEBUG 2019-04-09 06:13:12,650 django.db.backends.schema CREATE UNIQUE INDEX "social_auth_association_server_url_078befa2_uniq" ON "social_auth_association" ("server_url", "handle"); (params [])
+DEBUG 2019-04-09 06:13:12,650 django.db.backends (0.000) CREATE UNIQUE INDEX "social_auth_association_server_url_078befa2_uniq" ON "social_auth_association" ("server_url", "handle"); args=[]
+DEBUG 2019-04-09 06:13:12,655 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,655 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,655 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,656 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_auth', '0005_auto_20160727_2333', '2019-04-09 06:13:12.655836'); args=[u'social_auth', u'0005_auto_20160727_2333', u'2019-04-09 06:13:12.655836']
+DEBUG 2019-04-09 06:13:12,661 django.db.backends (0.000) PRAGMA foreign_keys; args=None
+DEBUG 2019-04-09 06:13:12,661 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,661 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,664 django.db.backends.schema CREATE TABLE "social_auth_partial" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "token" varchar(32) NOT NULL, "next_step" smallint unsigned NOT NULL, "backend" varchar(32) NOT NULL, "data" text NOT NULL); (params None)
+DEBUG 2019-04-09 06:13:12,665 django.db.backends (0.000) CREATE TABLE "social_auth_partial" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "token" varchar(32) NOT NULL, "next_step" smallint unsigned NOT NULL, "backend" varchar(32) NOT NULL, "data" text NOT NULL); args=None
+DEBUG 2019-04-09 06:13:12,665 django.db.backends.schema CREATE INDEX "social_auth_partial_94a08da1" ON "social_auth_partial" ("token"); (params [])
+DEBUG 2019-04-09 06:13:12,666 django.db.backends (0.000) CREATE INDEX "social_auth_partial_94a08da1" ON "social_auth_partial" ("token"); args=[]
+DEBUG 2019-04-09 06:13:12,672 django.db.backends (0.000) PRAGMA foreign_keys = 0; args=None
+DEBUG 2019-04-09 06:13:12,672 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,673 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,673 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0006_partial', '2019-04-09 06:13:12.672944'); args=[u'social_django', u'0006_partial', u'2019-04-09 06:13:12.672944']
+DEBUG 2019-04-09 06:13:12,678 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,678 django.db.backends (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+DEBUG 2019-04-09 06:13:12,678 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,679 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,679 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0004_auto_20160423_0400', '2019-04-09 06:13:12.679020'); args=[u'social_django', u'0004_auto_20160423_0400', u'2019-04-09 06:13:12.679020']
+DEBUG 2019-04-09 06:13:12,684 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,684 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,684 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0005_auto_20160727_2333', '2019-04-09 06:13:12.684348'); args=[u'social_django', u'0005_auto_20160727_2333', u'2019-04-09 06:13:12.684348']
+DEBUG 2019-04-09 06:13:12,689 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,690 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,690 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0002_add_related_name', '2019-04-09 06:13:12.690104'); args=[u'social_django', u'0002_add_related_name', u'2019-04-09 06:13:12.690104']
+DEBUG 2019-04-09 06:13:12,695 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,696 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,696 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0001_initial', '2019-04-09 06:13:12.696251'); args=[u'social_django', u'0001_initial', u'2019-04-09 06:13:12.696251']
+DEBUG 2019-04-09 06:13:12,701 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:12,701 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,702 django.db.backends (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('social_django', '0003_alter_email_max_length', '2019-04-09 06:13:12.701623'); args=[u'social_django', u'0003_alter_email_max_length', u'2019-04-09 06:13:12.701623']
+DEBUG 2019-04-09 06:13:12,710 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+DEBUG 2019-04-09 06:13:12,713 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+DEBUG 2019-04-09 06:13:12,714 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,715 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('admin', 'logentry'); args=['admin', 'logentry']
+DEBUG 2019-04-09 06:13:12,727 django.db.backends (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+DEBUG 2019-04-09 06:13:12,728 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,730 django.db.backends (0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add log entry', 1, 'add_logentry' UNION ALL SELECT 'Can change log entry', 1, 'change_logentry' UNION ALL SELECT 'Can delete log entry', 1, 'delete_logentry'; args=(u'Can add log entry', 1, u'add_logentry', u'Can change log entry', 1, u'change_logentry', u'Can delete log entry', 1, u'delete_logentry')
+DEBUG 2019-04-09 06:13:12,737 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+DEBUG 2019-04-09 06:13:12,740 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+DEBUG 2019-04-09 06:13:12,742 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+DEBUG 2019-04-09 06:13:12,742 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,744 django.db.backends (0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'permission'); args=['auth', 'permission']
+DEBUG 2019-04-09 06:13:12,751 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+DEBUG 2019-04-09 06:13:12,752 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+DEBUG 2019-04-09 06:13:12,753 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,754 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'group'); args=['auth', 'group']
+DEBUG 2019-04-09 06:13:12,762 django.db.backends (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3)
+DEBUG 2019-04-09 06:13:12,763 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,764 django.db.backends (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add permission', 2, 'add_permission' UNION ALL SELECT 'Can change permission', 2, 'change_permission' UNION ALL SELECT 'Can delete permission', 2, 'delete_permission' UNION ALL SELECT 'Can add group', 3, 'add_group' UNION ALL SELECT 'Can change group', 3, 'change_group' UNION ALL SELECT 'Can delete group', 3, 'delete_group'; args=(u'Can add permission', 2, u'add_permission', u'Can change permission', 2, u'change_permission', u'Can delete permission', 2, u'delete_permission', u'Can add group', 3, u'add_group', u'Can change group', 3, u'change_group', u'Can delete group', 3, u'delete_group')
+DEBUG 2019-04-09 06:13:12,771 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+DEBUG 2019-04-09 06:13:12,773 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+DEBUG 2019-04-09 06:13:12,774 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+DEBUG 2019-04-09 06:13:12,774 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,775 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('contenttypes', 'contenttype'); args=['contenttypes', 'contenttype']
+DEBUG 2019-04-09 06:13:12,783 django.db.backends (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(4,)
+DEBUG 2019-04-09 06:13:12,783 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,785 django.db.backends (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add content type', 4, 'add_contenttype' UNION ALL SELECT 'Can change content type', 4, 'change_contenttype' UNION ALL SELECT 'Can delete content type', 4, 'delete_contenttype'; args=(u'Can add content type', 4, u'add_contenttype', u'Can change content type', 4, u'change_contenttype', u'Can delete content type', 4, u'delete_contenttype')
+DEBUG 2019-04-09 06:13:12,792 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+DEBUG 2019-04-09 06:13:12,795 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+DEBUG 2019-04-09 06:13:12,797 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+DEBUG 2019-04-09 06:13:12,797 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,798 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('sessions', 'session'); args=['sessions', 'session']
+DEBUG 2019-04-09 06:13:12,808 django.db.backends (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+DEBUG 2019-04-09 06:13:12,809 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,811 django.db.backends (0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add session', 5, 'add_session' UNION ALL SELECT 'Can change session', 5, 'change_session' UNION ALL SELECT 'Can delete session', 5, 'delete_session'; args=(u'Can add session', 5, u'add_session', u'Can change session', 5, u'change_session', u'Can delete session', 5, u'delete_session')
+DEBUG 2019-04-09 06:13:12,818 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+DEBUG 2019-04-09 06:13:12,824 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'favourite' AND "django_content_type"."app_label" = 'discussions'); args=('favourite', u'discussions')
+DEBUG 2019-04-09 06:13:12,826 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'favourite' AND "django_content_type"."app_label" = 'discussions'); args=('favourite', u'discussions')
+DEBUG 2019-04-09 06:13:12,827 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,828 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('discussions', 'favourite'); args=[u'discussions', 'favourite']
+DEBUG 2019-04-09 06:13:12,836 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'post' AND "django_content_type"."app_label" = 'discussions'); args=('post', u'discussions')
+DEBUG 2019-04-09 06:13:12,838 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'post' AND "django_content_type"."app_label" = 'discussions'); args=('post', u'discussions')
+DEBUG 2019-04-09 06:13:12,838 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,840 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('discussions', 'post'); args=[u'discussions', 'post']
+DEBUG 2019-04-09 06:13:12,847 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'vote' AND "django_content_type"."app_label" = 'discussions'); args=('vote', u'discussions')
+DEBUG 2019-04-09 06:13:12,849 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'vote' AND "django_content_type"."app_label" = 'discussions'); args=('vote', u'discussions')
+DEBUG 2019-04-09 06:13:12,850 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,851 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('discussions', 'vote'); args=[u'discussions', 'vote']
+DEBUG 2019-04-09 06:13:12,859 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'comment' AND "django_content_type"."app_label" = 'discussions'); args=('comment', u'discussions')
+DEBUG 2019-04-09 06:13:12,861 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'comment' AND "django_content_type"."app_label" = 'discussions'); args=('comment', u'discussions')
+DEBUG 2019-04-09 06:13:12,861 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,863 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('discussions', 'comment'); args=[u'discussions', 'comment']
+DEBUG 2019-04-09 06:13:12,870 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'discussions'); args=('user', u'discussions')
+DEBUG 2019-04-09 06:13:12,873 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'discussions'); args=('user', u'discussions')
+DEBUG 2019-04-09 06:13:12,873 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,874 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('discussions', 'user'); args=[u'discussions', 'user']
+DEBUG 2019-04-09 06:13:12,883 django.db.backends (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10, 6, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10, 6, 7)
+DEBUG 2019-04-09 06:13:12,884 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,887 django.db.backends (0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add favourite', 6, 'add_favourite' UNION ALL SELECT 'Can change favourite', 6, 'change_favourite' UNION ALL SELECT 'Can delete favourite', 6, 'delete_favourite' UNION ALL SELECT 'Can add post', 7, 'add_post' UNION ALL SELECT 'Can change post', 7, 'change_post' UNION ALL SELECT 'Can delete post', 7, 'delete_post' UNION ALL SELECT 'Can add vote', 8, 'add_vote' UNION ALL SELECT 'Can change vote', 8, 'change_vote' UNION ALL SELECT 'Can delete vote', 8, 'delete_vote' UNION ALL SELECT 'Can add comment', 9, 'add_comment' UNION ALL SELECT 'Can change comment', 9, 'change_comment' UNION ALL SELECT 'Can delete comment', 9, 'delete_comment' UNION ALL SELECT 'Can add user', 10, 'add_user' UNION ALL SELECT 'Can change user', 10, 'change_user' UNION ALL SELECT 'Can delete user', 10, 'delete_user'; args=(u'Can add favourite', 6, u'add_favourite', u'Can change favourite', 6, u'change_favourite', u'Can delete favourite', 6, u'delete_favourite', u'Can add post', 7, u'add_post', u'Can change post', 7, u'change_post', u'Can delete post', 7, u'delete_post', u'Can add vote', 8, u'add_vote', u'Can change vote', 8, u'change_vote', u'Can delete vote', 8, u'delete_vote', u'Can add comment', 9, u'add_comment', u'Can change comment', 9, u'change_comment', u'Can delete comment', 9, u'delete_comment', u'Can add user', 10, u'add_user', u'Can change user', 10, u'change_user', u'Can delete user', 10, u'delete_user')
+DEBUG 2019-04-09 06:13:12,893 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'discussions'; args=(u'discussions',)
+DEBUG 2019-04-09 06:13:12,894 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'nonce' AND "django_content_type"."app_label" = 'social_django'); args=('nonce', u'social_django')
+DEBUG 2019-04-09 06:13:12,895 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'nonce' AND "django_content_type"."app_label" = 'social_django'); args=('nonce', u'social_django')
+DEBUG 2019-04-09 06:13:12,895 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,896 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('social_django', 'nonce'); args=[u'social_django', 'nonce']
+DEBUG 2019-04-09 06:13:12,901 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'code' AND "django_content_type"."app_label" = 'social_django'); args=('code', u'social_django')
+DEBUG 2019-04-09 06:13:12,902 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'code' AND "django_content_type"."app_label" = 'social_django'); args=('code', u'social_django')
+DEBUG 2019-04-09 06:13:12,902 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,903 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('social_django', 'code'); args=[u'social_django', 'code']
+DEBUG 2019-04-09 06:13:12,910 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'usersocialauth' AND "django_content_type"."app_label" = 'social_django'); args=('usersocialauth', u'social_django')
+DEBUG 2019-04-09 06:13:12,912 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'usersocialauth' AND "django_content_type"."app_label" = 'social_django'); args=('usersocialauth', u'social_django')
+DEBUG 2019-04-09 06:13:12,913 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,914 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('social_django', 'usersocialauth'); args=[u'social_django', 'usersocialauth']
+DEBUG 2019-04-09 06:13:12,921 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'association' AND "django_content_type"."app_label" = 'social_django'); args=('association', u'social_django')
+DEBUG 2019-04-09 06:13:12,924 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'association' AND "django_content_type"."app_label" = 'social_django'); args=('association', u'social_django')
+DEBUG 2019-04-09 06:13:12,924 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,925 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('social_django', 'association'); args=[u'social_django', 'association']
+DEBUG 2019-04-09 06:13:12,933 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'partial' AND "django_content_type"."app_label" = 'social_django'); args=('partial', u'social_django')
+DEBUG 2019-04-09 06:13:12,935 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'partial' AND "django_content_type"."app_label" = 'social_django'); args=('partial', u'social_django')
+DEBUG 2019-04-09 06:13:12,936 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,937 django.db.backends (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('social_django', 'partial'); args=[u'social_django', 'partial']
+DEBUG 2019-04-09 06:13:12,947 django.db.backends (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11, 12, 13, 14, 15) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11, 12, 13, 14, 15)
+DEBUG 2019-04-09 06:13:12,949 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:13:12,952 django.db.backends (0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add nonce', 11, 'add_nonce' UNION ALL SELECT 'Can change nonce', 11, 'change_nonce' UNION ALL SELECT 'Can delete nonce', 11, 'delete_nonce' UNION ALL SELECT 'Can add code', 12, 'add_code' UNION ALL SELECT 'Can change code', 12, 'change_code' UNION ALL SELECT 'Can delete code', 12, 'delete_code' UNION ALL SELECT 'Can add user social auth', 13, 'add_usersocialauth' UNION ALL SELECT 'Can change user social auth', 13, 'change_usersocialauth' UNION ALL SELECT 'Can delete user social auth', 13, 'delete_usersocialauth' UNION ALL SELECT 'Can add association', 14, 'add_association' UNION ALL SELECT 'Can change association', 14, 'change_association' UNION ALL SELECT 'Can delete association', 14, 'delete_association' UNION ALL SELECT 'Can add partial', 15, 'add_partial' UNION ALL SELECT 'Can change partial', 15, 'change_partial' UNION ALL SELECT 'Can delete partial', 15, 'delete_partial'; args=(u'Can add nonce', 11, u'add_nonce', u'Can change nonce', 11, u'change_nonce', u'Can delete nonce', 11, u'delete_nonce', u'Can add code', 12, u'add_code', u'Can change code', 12, u'change_code', u'Can delete code', 12, u'delete_code', u'Can add user social auth', 13, u'add_usersocialauth', u'Can change user social auth', 13, u'change_usersocialauth', u'Can delete user social auth', 13, u'delete_usersocialauth', u'Can add association', 14, u'add_association', u'Can change association', 14, u'change_association', u'Can delete association', 14, u'delete_association', u'Can add partial', 15, u'add_partial', u'Can change partial', 15, u'change_partial', u'Can delete partial', 15, u'delete_partial')
+DEBUG 2019-04-09 06:13:12,960 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'social_django'; args=(u'social_django',)
+DEBUG 2019-04-09 06:13:16,578 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:13:16,579 django.db.backends (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+DEBUG 2019-04-09 06:13:33,843 django.db.backends (0.001) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."username" = 'AteebRaza'; args=('AteebRaza',)
+DEBUG 2019-04-09 06:15:09,784 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:15:09,785 django.db.backends (0.000) INSERT INTO "users" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "score") VALUES ('pbkdf2_sha256$30000$FCEJlGxukiah$uMOojP/eD7JRZOfkTMmlEFCXm8XGMY5QBqwOuw82wA4=', NULL, 1, 'AteebRaza', '', '', 'ateeb.raza@hashedin.com', 1, 1, '2019-04-09 06:15:09.755938', 0); args=[u'pbkdf2_sha256$30000$FCEJlGxukiah$uMOojP/eD7JRZOfkTMmlEFCXm8XGMY5QBqwOuw82wA4=', None, True, u'AteebRaza', u'', u'', u'ateeb.raza@hashedin.com', True, True, u'2019-04-09 06:15:09.755938', 0]
+DEBUG 2019-04-09 06:16:02,558 django.db.backends (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2019-04-09 06:16:02,560 django.db.backends (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+DEBUG 2019-04-09 06:16:06,408 django.db.backends (0.001) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments", ("posts"."upvotes" - "posts"."downvotes") AS "score", "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "posts" INNER JOIN "users" ON ("posts"."author_id" = "users"."id") ORDER BY "posts"."submission_time" DESC LIMIT 50; args=()
+DEBUG 2019-04-09 06:16:11,406 django.db.backends (0.001) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments", ("posts"."upvotes" - "posts"."downvotes") AS "score", "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "posts" INNER JOIN "users" ON ("posts"."author_id" = "users"."id") ORDER BY "posts"."submission_time" DESC LIMIT 50; args=()
+DEBUG 2019-04-09 06:18:14,460 django.db.backends (0.001) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."username" = 'AteebRaza'; args=(u'AteebRaza',)
+DEBUG 2019-04-09 06:18:14,484 django.db.backends (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' LIMIT 1; args=(u'a51tud7jz33q9c0th81o033zhpz1nnbh',)
+DEBUG 2019-04-09 06:18:14,485 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:18:14,485 django.db.backends (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'a51tud7jz33q9c0th81o033zhpz1nnbh', 'MGMzOGJiNmUxNzBmOGY4NGZiNmUyMzU4ZTM0ZmQxMjg5Mjc2Yzk0MTp7fQ==', '2019-04-23 06:18:14.485125'; args=(u'a51tud7jz33q9c0th81o033zhpz1nnbh', u'MGMzOGJiNmUxNzBmOGY4NGZiNmUyMzU4ZTM0ZmQxMjg5Mjc2Yzk0MTp7fQ==', u'2019-04-23 06:18:14.485125')
+DEBUG 2019-04-09 06:18:14,492 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:18:14,493 django.db.backends (0.000) UPDATE "users" SET "last_login" = '2019-04-09 06:18:14.492457' WHERE "users"."id" = 1; args=(u'2019-04-09 06:18:14.492457', 1)
+DEBUG 2019-04-09 06:18:14,498 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:18:14,499 django.db.backends (0.000) UPDATE "django_session" SET "session_data" = 'YTBiMDk5OTNhOTY3ZTQzY2YzZGU2MzU4MjE0YjA5MmU3YzcxNzY4MDp7Il9hdXRoX3VzZXJfaGFzaCI6Ijc5ZjA0M2FkYmU4ZTIwNTAyZDZkZWNkZGQxMGM4YWQ0MjA1MGJiNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', "expire_date" = '2019-04-23 06:18:14.498755' WHERE "django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh'; args=(u'YTBiMDk5OTNhOTY3ZTQzY2YzZGU2MzU4MjE0YjA5MmU3YzcxNzY4MDp7Il9hdXRoX3VzZXJfaGFzaCI6Ijc5ZjA0M2FkYmU4ZTIwNTAyZDZkZWNkZGQxMGM4YWQ0MjA1MGJiNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', u'2019-04-23 06:18:14.498755', u'a51tud7jz33q9c0th81o033zhpz1nnbh')
+DEBUG 2019-04-09 06:18:14,509 django.db.backends (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:18:14.506454'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:18:14.506454')
+DEBUG 2019-04-09 06:18:14,510 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:18:14,512 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments", ("posts"."upvotes" - "posts"."downvotes") AS "score", "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "posts" INNER JOIN "users" ON ("posts"."author_id" = "users"."id") ORDER BY "posts"."submission_time" DESC LIMIT 50; args=()
+DEBUG 2019-04-09 06:18:14,513 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'post' AND "django_content_type"."app_label" = 'discussions'); args=('post', u'discussions')
+DEBUG 2019-04-09 06:18:24,747 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:18:24.743479'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:18:24.743479')
+DEBUG 2019-04-09 06:18:24,749 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:19:19,828 django.db.backends (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:19:19.821992'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:19:19.821992')
+DEBUG 2019-04-09 06:19:19,831 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:19:19,832 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:19:19,833 django.db.backends (0.000) INSERT INTO "posts" ("author_id", "upvotes", "downvotes", "flags", "title", "url", "text", "submission_time", "num_comments") VALUES (1, 0, 0, 0, 'HashedIn Interns', '', 'Trying our first assignment', '2019-04-09 06:19:19.833406', 0); args=[1, 0, 0, 0, u'HashedIn Interns', u'', u'Trying our first assignment', u'2019-04-09 06:19:19.833406', 0]
+DEBUG 2019-04-09 06:19:19,844 django.db.backends (0.001) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments", ("posts"."upvotes" - "posts"."downvotes") AS "score", "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "posts" INNER JOIN "users" ON ("posts"."author_id" = "users"."id") WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:19:19,845 django.db.backends (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:19:19.844765'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:19:19.844765')
+DEBUG 2019-04-09 06:19:19,846 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:19:19,847 django.db.backends (0.000) SELECT "votes"."id", "votes"."content_type_id", "votes"."object_id", "votes"."voter_id", "votes"."type_of_vote", "votes"."submission_time" FROM "votes" WHERE ("votes"."type_of_vote" IN (1, 2) AND "votes"."voter_id" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1); args=(1, 2, 1, 7, 1)
+DEBUG 2019-04-09 06:19:19,848 django.db.backends (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'comment' AND "django_content_type"."app_label" = 'discussions'); args=('comment', u'discussions')
+DEBUG 2019-04-09 06:19:19,849 django.db.backends (0.000) 
+                SELECT c.id, c.text, u.id, u.username, c.submission_time,
+                c.wbs, length(c.wbs)/5 as indent, 
+                c.upvotes, c.downvotes, c.flags,
+                c.upvotes - c.downvotes as score,
+                up.is_upvoted, down.is_downvoted
+                FROM comments c 
+                INNER JOIN users u on c.author_id = u.id
+                LEFT OUTER JOIN (
+                    SELECT 1 as is_upvoted, v1.object_id as comment_id
+                    FROM votes v1
+                    WHERE v1.content_type_id = 9
+                    AND type_of_vote = 1
+                    AND v1.voter_id = 1
+                ) up on c.id = up.comment_id
+                LEFT OUTER JOIN (
+                    SELECT 1 as is_downvoted, v2.object_id as comment_id
+                    FROM votes v2
+                    WHERE v2.content_type_id = 9
+                    AND type_of_vote = 2
+                    AND v2.voter_id = 1
+                ) down on c.id = down.comment_id
+                WHERE c.post_id = '1'
+                ORDER BY c.wbs
+            ; args=[9, 1, 9, 1, u'1']
+DEBUG 2019-04-09 06:20:36,867 django.db.backends (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:36.861021'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:36.861021')
+DEBUG 2019-04-09 06:20:36,871 django.db.backends (0.001) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:36,876 django.db.backends (0.001) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments", ("posts"."upvotes" - "posts"."downvotes") AS "score", "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "posts" INNER JOIN "users" ON ("posts"."author_id" = "users"."id") ORDER BY "posts"."submission_time" DESC LIMIT 50; args=()
+DEBUG 2019-04-09 06:20:36,880 django.db.backends (0.000) SELECT "votes"."id", "votes"."object_id", "votes"."type_of_vote" FROM "votes" WHERE ("votes"."voter_id" = 1 AND "votes"."object_id" IN (1) AND "votes"."content_type_id" = 7); args=(1, 1, 7)
+DEBUG 2019-04-09 06:20:38,415 django.db.backends (0.002) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments", ("posts"."upvotes" - "posts"."downvotes") AS "score", "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "posts" INNER JOIN "users" ON ("posts"."author_id" = "users"."id") WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:38,419 django.db.backends (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:38.416870'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:38.416870')
+DEBUG 2019-04-09 06:20:38,422 django.db.backends (0.001) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:38,427 django.db.backends (0.000) SELECT "votes"."id", "votes"."content_type_id", "votes"."object_id", "votes"."voter_id", "votes"."type_of_vote", "votes"."submission_time" FROM "votes" WHERE ("votes"."type_of_vote" IN (1, 2) AND "votes"."voter_id" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1); args=(1, 2, 1, 7, 1)
+DEBUG 2019-04-09 06:20:38,429 django.db.backends (0.001) 
+                SELECT c.id, c.text, u.id, u.username, c.submission_time,
+                c.wbs, length(c.wbs)/5 as indent, 
+                c.upvotes, c.downvotes, c.flags,
+                c.upvotes - c.downvotes as score,
+                up.is_upvoted, down.is_downvoted
+                FROM comments c 
+                INNER JOIN users u on c.author_id = u.id
+                LEFT OUTER JOIN (
+                    SELECT 1 as is_upvoted, v1.object_id as comment_id
+                    FROM votes v1
+                    WHERE v1.content_type_id = 9
+                    AND type_of_vote = 1
+                    AND v1.voter_id = 1
+                ) up on c.id = up.comment_id
+                LEFT OUTER JOIN (
+                    SELECT 1 as is_downvoted, v2.object_id as comment_id
+                    FROM votes v2
+                    WHERE v2.content_type_id = 9
+                    AND type_of_vote = 2
+                    AND v2.voter_id = 1
+                ) down on c.id = down.comment_id
+                WHERE c.post_id = '1'
+                ORDER BY c.wbs
+            ; args=[9, 1, 9, 1, u'1']
+DEBUG 2019-04-09 06:20:47,627 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:47.625821'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:47.625821')
+DEBUG 2019-04-09 06:20:47,628 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:47,629 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:47,631 django.db.backends (0.000) SELECT (1) AS "a" FROM "votes" WHERE ("votes"."voter_id" = 1 AND "votes"."type_of_vote" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1) LIMIT 1; args=(1, 1, 7, 1)
+DEBUG 2019-04-09 06:20:47,632 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:47,633 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:47,633 django.db.backends (0.000) INSERT INTO "votes" ("content_type_id", "object_id", "voter_id", "type_of_vote", "submission_time") VALUES (7, 1, 1, 1, '2019-04-09 06:20:47.633315'); args=[7, 1, 1, 1, u'2019-04-09 06:20:47.633315']
+DEBUG 2019-04-09 06:20:47,639 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:47,641 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" + 1), "downvotes" = 0, "flags" = 0 WHERE "posts"."id" = 1; args=(1, 0, 0, 1)
+DEBUG 2019-04-09 06:20:47,645 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:47,648 django.db.backends (0.000) UPDATE "users" SET "score" = ("users"."score" + 1) WHERE "users"."id" = 1; args=(1, 1)
+DEBUG 2019-04-09 06:20:48,167 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:48.165513'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:48.165513')
+DEBUG 2019-04-09 06:20:48,168 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:48,169 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:48,170 django.db.backends (0.000) SELECT "votes"."id", "votes"."content_type_id", "votes"."object_id", "votes"."voter_id", "votes"."type_of_vote", "votes"."submission_time" FROM "votes" WHERE ("votes"."type_of_vote" IN (1, 2) AND "votes"."voter_id" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1); args=(1, 2, 1, 7, 1)
+DEBUG 2019-04-09 06:20:48,171 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:48,171 django.db.backends (0.000) DELETE FROM "votes" WHERE "votes"."id" IN (1); args=(1,)
+DEBUG 2019-04-09 06:20:48,177 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:48,178 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" - 1), "downvotes" = ("posts"."downvotes" - 0) WHERE "posts"."id" = 1; args=(1, 0, 1)
+DEBUG 2019-04-09 06:20:48,184 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:48,185 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:48,186 django.db.backends (0.000) UPDATE "users" SET "score" = (("users"."score" - 1) + 0) WHERE "users"."id" = 1; args=(1, 0, 1)
+DEBUG 2019-04-09 06:20:48,880 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:48.878166'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:48.878166')
+DEBUG 2019-04-09 06:20:48,882 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:48,883 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:48,885 django.db.backends (0.000) SELECT (1) AS "a" FROM "votes" WHERE ("votes"."voter_id" = 1 AND "votes"."type_of_vote" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1) LIMIT 1; args=(1, 1, 7, 1)
+DEBUG 2019-04-09 06:20:48,886 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:48,887 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:48,887 django.db.backends (0.000) INSERT INTO "votes" ("content_type_id", "object_id", "voter_id", "type_of_vote", "submission_time") VALUES (7, 1, 1, 1, '2019-04-09 06:20:48.887392'); args=[7, 1, 1, 1, u'2019-04-09 06:20:48.887392']
+DEBUG 2019-04-09 06:20:48,894 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:48,894 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" + 1), "downvotes" = 0, "flags" = 0 WHERE "posts"."id" = 1; args=(1, 0, 0, 1)
+DEBUG 2019-04-09 06:20:48,899 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:48,900 django.db.backends (0.000) UPDATE "users" SET "score" = ("users"."score" + 1) WHERE "users"."id" = 1; args=(1, 1)
+DEBUG 2019-04-09 06:20:49,392 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:49.390822'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:49.390822')
+DEBUG 2019-04-09 06:20:49,393 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:49,395 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:49,396 django.db.backends (0.000) SELECT "votes"."id", "votes"."content_type_id", "votes"."object_id", "votes"."voter_id", "votes"."type_of_vote", "votes"."submission_time" FROM "votes" WHERE ("votes"."type_of_vote" IN (1, 2) AND "votes"."voter_id" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1); args=(1, 2, 1, 7, 1)
+DEBUG 2019-04-09 06:20:49,397 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:49,397 django.db.backends (0.000) DELETE FROM "votes" WHERE "votes"."id" IN (2); args=(2,)
+DEBUG 2019-04-09 06:20:49,405 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:49,406 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" - 1), "downvotes" = ("posts"."downvotes" - 0) WHERE "posts"."id" = 1; args=(1, 0, 1)
+DEBUG 2019-04-09 06:20:49,411 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:49,411 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:49,412 django.db.backends (0.000) UPDATE "users" SET "score" = (("users"."score" - 1) + 0) WHERE "users"."id" = 1; args=(1, 0, 1)
+DEBUG 2019-04-09 06:20:50,118 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:50.114541'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:50.114541')
+DEBUG 2019-04-09 06:20:50,122 django.db.backends (0.001) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:50,125 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:50,129 django.db.backends (0.000) SELECT (1) AS "a" FROM "votes" WHERE ("votes"."voter_id" = 1 AND "votes"."type_of_vote" = 2 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1) LIMIT 1; args=(1, 2, 7, 1)
+DEBUG 2019-04-09 06:20:50,132 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:50,134 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:50,136 django.db.backends (0.001) INSERT INTO "votes" ("content_type_id", "object_id", "voter_id", "type_of_vote", "submission_time") VALUES (7, 1, 1, 2, '2019-04-09 06:20:50.135349'); args=[7, 1, 1, 2, u'2019-04-09 06:20:50.135349']
+DEBUG 2019-04-09 06:20:50,143 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:50,145 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = 0, "downvotes" = ("posts"."downvotes" + 1), "flags" = 0 WHERE "posts"."id" = 1; args=(0, 1, 0, 1)
+DEBUG 2019-04-09 06:20:50,150 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:50,152 django.db.backends (0.000) UPDATE "users" SET "score" = ("users"."score" + -1) WHERE "users"."id" = 1; args=(-1, 1)
+DEBUG 2019-04-09 06:20:50,649 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:50.647859'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:50.647859')
+DEBUG 2019-04-09 06:20:50,651 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:50,652 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:50,654 django.db.backends (0.000) SELECT "votes"."id", "votes"."content_type_id", "votes"."object_id", "votes"."voter_id", "votes"."type_of_vote", "votes"."submission_time" FROM "votes" WHERE ("votes"."type_of_vote" IN (1, 2) AND "votes"."voter_id" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1); args=(1, 2, 1, 7, 1)
+DEBUG 2019-04-09 06:20:50,654 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:50,655 django.db.backends (0.000) DELETE FROM "votes" WHERE "votes"."id" IN (3); args=(3,)
+DEBUG 2019-04-09 06:20:50,662 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:50,664 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" - 0), "downvotes" = ("posts"."downvotes" - 1) WHERE "posts"."id" = 1; args=(0, 1, 1)
+DEBUG 2019-04-09 06:20:50,674 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:50,675 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:50,677 django.db.backends (0.000) UPDATE "users" SET "score" = (("users"."score" - 0) + 1) WHERE "users"."id" = 1; args=(0, 1, 1)
+DEBUG 2019-04-09 06:20:51,287 django.db.backends (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:51.283304'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:51.283304')
+DEBUG 2019-04-09 06:20:51,290 django.db.backends (0.001) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:51,293 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:51,298 django.db.backends (0.001) SELECT (1) AS "a" FROM "votes" WHERE ("votes"."voter_id" = 1 AND "votes"."type_of_vote" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1) LIMIT 1; args=(1, 1, 7, 1)
+DEBUG 2019-04-09 06:20:51,302 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:51,304 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:51,306 django.db.backends (0.001) INSERT INTO "votes" ("content_type_id", "object_id", "voter_id", "type_of_vote", "submission_time") VALUES (7, 1, 1, 1, '2019-04-09 06:20:51.305222'); args=[7, 1, 1, 1, u'2019-04-09 06:20:51.305222']
+DEBUG 2019-04-09 06:20:51,314 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:51,317 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" + 1), "downvotes" = 0, "flags" = 0 WHERE "posts"."id" = 1; args=(1, 0, 0, 1)
+DEBUG 2019-04-09 06:20:51,322 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:51,325 django.db.backends (0.000) UPDATE "users" SET "score" = ("users"."score" + 1) WHERE "users"."id" = 1; args=(1, 1)
+DEBUG 2019-04-09 06:20:52,882 django.db.backends (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:52.877534'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:52.877534')
+DEBUG 2019-04-09 06:20:52,886 django.db.backends (0.001) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:52,889 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:52,893 django.db.backends (0.000) SELECT "votes"."id", "votes"."content_type_id", "votes"."object_id", "votes"."voter_id", "votes"."type_of_vote", "votes"."submission_time" FROM "votes" WHERE ("votes"."type_of_vote" IN (1, 2) AND "votes"."voter_id" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1); args=(1, 2, 1, 7, 1)
+DEBUG 2019-04-09 06:20:52,894 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:52,896 django.db.backends (0.000) DELETE FROM "votes" WHERE "votes"."id" IN (4); args=(4,)
+DEBUG 2019-04-09 06:20:52,904 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:52,907 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" - 1), "downvotes" = ("posts"."downvotes" - 0) WHERE "posts"."id" = 1; args=(1, 0, 1)
+DEBUG 2019-04-09 06:20:52,915 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:52,916 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:52,919 django.db.backends (0.000) UPDATE "users" SET "score" = (("users"."score" - 1) + 0) WHERE "users"."id" = 1; args=(1, 0, 1)
+DEBUG 2019-04-09 06:20:53,469 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:53.465171'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:53.465171')
+DEBUG 2019-04-09 06:20:53,472 django.db.backends (0.001) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:53,475 django.db.backends (0.001) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:53,482 django.db.backends (0.000) SELECT (1) AS "a" FROM "votes" WHERE ("votes"."voter_id" = 1 AND "votes"."type_of_vote" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1) LIMIT 1; args=(1, 1, 7, 1)
+DEBUG 2019-04-09 06:20:53,486 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:53,488 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:53,489 django.db.backends (0.000) INSERT INTO "votes" ("content_type_id", "object_id", "voter_id", "type_of_vote", "submission_time") VALUES (7, 1, 1, 1, '2019-04-09 06:20:53.488938'); args=[7, 1, 1, 1, u'2019-04-09 06:20:53.488938']
+DEBUG 2019-04-09 06:20:53,496 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:53,498 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" + 1), "downvotes" = 0, "flags" = 0 WHERE "posts"."id" = 1; args=(1, 0, 0, 1)
+DEBUG 2019-04-09 06:20:53,503 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:53,504 django.db.backends (0.000) UPDATE "users" SET "score" = ("users"."score" + 1) WHERE "users"."id" = 1; args=(1, 1)
+DEBUG 2019-04-09 06:20:55,590 django.db.backends (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'a51tud7jz33q9c0th81o033zhpz1nnbh' AND "django_session"."expire_date" > '2019-04-09 06:20:55.588948'); args=('a51tud7jz33q9c0th81o033zhpz1nnbh', u'2019-04-09 06:20:55.588948')
+DEBUG 2019-04-09 06:20:55,592 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:55,593 django.db.backends (0.000) SELECT "posts"."id", "posts"."author_id", "posts"."upvotes", "posts"."downvotes", "posts"."flags", "posts"."title", "posts"."url", "posts"."text", "posts"."submission_time", "posts"."num_comments" FROM "posts" WHERE "posts"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:55,594 django.db.backends (0.000) SELECT "votes"."id", "votes"."content_type_id", "votes"."object_id", "votes"."voter_id", "votes"."type_of_vote", "votes"."submission_time" FROM "votes" WHERE ("votes"."type_of_vote" IN (1, 2) AND "votes"."voter_id" = 1 AND "votes"."content_type_id" = 7 AND "votes"."object_id" = 1); args=(1, 2, 1, 7, 1)
+DEBUG 2019-04-09 06:20:55,595 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:55,595 django.db.backends (0.000) DELETE FROM "votes" WHERE "votes"."id" IN (5); args=(5,)
+DEBUG 2019-04-09 06:20:55,602 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:55,603 django.db.backends (0.000) UPDATE "posts" SET "upvotes" = ("posts"."upvotes" - 1), "downvotes" = ("posts"."downvotes" - 0) WHERE "posts"."id" = 1; args=(1, 0, 1)
+DEBUG 2019-04-09 06:20:55,609 django.db.backends (0.000) SELECT "users"."id", "users"."password", "users"."last_login", "users"."is_superuser", "users"."username", "users"."first_name", "users"."last_name", "users"."email", "users"."is_staff", "users"."is_active", "users"."date_joined", "users"."score" FROM "users" WHERE "users"."id" = 1; args=(1,)
+DEBUG 2019-04-09 06:20:55,610 django.db.backends (0.000) BEGIN; args=None
+DEBUG 2019-04-09 06:20:55,610 django.db.backends (0.000) UPDATE "users" SET "score" = (("users"."score" - 1) + 0) WHERE "users"."id" = 1; args=(1, 0, 1)
